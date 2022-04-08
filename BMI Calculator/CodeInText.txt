@@ -1,0 +1,40 @@
+# importing modules
+import time
+
+# text and inputting variables
+print("Welcome to the BMI (Body Mass Index) Calculator! MADE BY IMSERIOUSS")
+weight = input("How heavy are you in KILOGRAMS?: ")
+height = input("How tall are you in CENTIMETERS?: ")
+
+# if the user inputs strings
+try:
+    weight = int(weight)
+    height = int(height)
+    
+    # placebo calculating system and calculating BMI
+    print("Calculating...")
+    height = height / 100
+    BMI = weight / (height * height)
+    BMI = str(BMI)
+    time.sleep(2)
+    
+    # printing calculated BMI
+    print("___________________________")
+    print("Your BMI is: ", BMI[:4])
+    
+    # indicating to the user if he/she is healthy
+    BMI = float(BMI)
+    if BMI <= 18.5:
+        print("You are UNDERWEIGHT!")
+    elif BMI <= 24.9:
+        print("You are HEALTHY!")
+    elif BMI <= 29.9:
+        print("You are OVERWEIGHT!")
+    elif BMI <= 30.0:
+        print("You are OBESE!")
+    else:
+        print("You are SEVERELY OBESE!")
+    k = input("PRESS ENTER TO CLOSE THE PROGRAM")    
+except:
+    print("YOU HAVE TO INPUT NUMBERS INSTEAD OF LETERS!")
+    l = input("PRESS ENTER TO CLOSE THE PROGRAM")
